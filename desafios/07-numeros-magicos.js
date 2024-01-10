@@ -1,5 +1,9 @@
 function lookForUpdades() {}
 
-setInterval(lookForUpdades, 60 * 30 * 1000)
+setInterval(lookForUpdades, 1000 * 60 * 30)
 
-function calculateDiscount(price, discount) {}
+function calculateDiscount(priceInCents, discountAmountInPercentage) {
+
+  // Retorna preço em centavos e desconto em porcento
+
+}

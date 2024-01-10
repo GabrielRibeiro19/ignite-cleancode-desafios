@@ -1,19 +1,14 @@
-// Essa função tem o objetivo de registrar um novo usuário no banco.
-async function register(data) {
-  // Desestrutura os dados recebidos.
+async function registerNewUser(data) {
+
   const { email, name, avatar } = data
 
-  // Verifica se o avatar foi informado.
   if (!avatar) return { error: 'avatar is required' }
 
-  // Verifica se o nome foi informado.
   if(!name) return { error: 'name is required' }
 
-  // Essa função retorna o usuário a partir do email informado
-  const userMail = getUserByEmail(email)
+  const userMailInUse = getUserByEmail(email)
 
-  // Verificação se o email informado já foi utilizado por algum usuário.
-  if (userMail) {
+  if (userMailInUse) {
     return { error: 'email already used' }
   }
 
